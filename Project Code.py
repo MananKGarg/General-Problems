@@ -1,4 +1,4 @@
-def ispow2(n):
+def ispow2(n): # Check if a number is power of 2
     if (n == 0):
         return False
     elif (n ==1):
@@ -9,7 +9,7 @@ def ispow2(n):
         n = n // 2
     return True
 
-def no2(n):
+def no2(n):     # If it is power of 2, then what power.
 
     count = 0
     while(n != 1 ):
@@ -19,58 +19,6 @@ def no2(n):
 
 
 
-t = int(input())
-
-for k in range(t):
-    string = input()
-    string = string.split()
-    nums = [int(i) for i in string]
-
-
-    if ( (nums[0] == 0) or (nums[1] == 0)):
-        print("-1")
-    elif (nums[0] == nums[1]):
-        print("0")
-
-    elif(nums[0]*nums[1] > 0):
-
-        nums[0] = abs(nums[0])
-        nums[1] = abs(nums[1])
-
-        if (nums[1] > nums[0]):
-
-
-
-            if ( ispow2(nums[1] // nums[0])):
-
-                p = no2(nums[1]//nums[0])
-
-                if p == 1:
-                    print("1")
-                elif p == 2:
-                    print("1")
-                elif p % 3 == 0:
-                    print((p//3))
-                else:
-                    print((p//3) + 1)
-            else:
-                print("-1")
-        else:
-            if (ispow2(nums[0] // nums[1])):
-
-                p = no2(nums[0] // nums[1])
-
-                if p == 1:
-                    print("1")
-                elif p == 2:
-                    print("1")
-                elif p % 3 == 0:
-                    print((p//3))
-                else:
-
-                    print((p // 3) + 1)
-            else:
-                print("-1")
 
 
 
